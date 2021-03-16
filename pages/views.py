@@ -13,10 +13,8 @@ def UploadPageView(request):
         form = UploadImage(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            message = "Image uploaded succesfully!"
     else:
         form = UploadImage()
-    context = {'foo': 'bar'}
     return render(request, 'upload.html')
 
 class HomePageView(TemplateView):
