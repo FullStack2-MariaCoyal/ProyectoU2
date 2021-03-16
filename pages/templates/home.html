@@ -1,18 +1,70 @@
 {% extends './pages/components/navbar.html' %}
-
+{% load static %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<h1>Soy el home bue</h1>
-</body>
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<div class="container">
+    <div class="card m-0 row justify-content-center" style="width: 50rem; ">
+        <div class="col-auto p-5 text-center" style="width: 50rem;">
+            <img src="{% static 'static/img/libros.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Saga de libros</h5>
+                <p class="card-text">Una trilogía que no lo es. Un auténtico fenómeno que ha trascendido las fronteras
+                    de su
+                    país. Un libro que ha dado pie a un universo transmedia en el que cómics, libros, videojuegos y
+                    quizás
+                    en un futuro una película, van sumando piezas del puzzle. ¿Queréis saber más? Os lo recomiendo al
+                    comienzo del podcast LCDE 58, y os explico lo realmente interesante de estos libros, sin desvelar
+                    nada
+                    relevante de la trama, a continuación.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card m-0 row justify-content-center" style="width: 50rem;">
+        <div class="card m-0 row justify-content-center" style="width: 50rem; ">
+            <div class="col-auto p-5 text-center">
+                <img src="{% static 'static/img/juegos.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Saga de videojuegos</h5>
+                    <p class="card-text">Metro (en ruso, Метро) es una franquicia de novelas y videojuegos, que comenzó
+                        con el
+                        lanzamiento de la novela de Dmitry Glukhovsky's Metro 2033 en 2005. Aunque comenzó en Rusia, el
+                        proyecto
+                        goza de gran popularidad en Polonia, Rumania, Hungría, Ucrania y Alemania.1​ El estudio
+                        ucraniano 4A
+                        Games había desarrollado cuatro títulos ambientados en el universo: Metro 2033 (2010), Metro:
+                        Last
+                        Light. (2013), Metro: Redux (2014) y Metro Exodus (2019).2​Todas las historias de Metro que
+                        conforman el
+                        Universo de Metro 2033 comparten el mismo escenario: el mundo ficticio de la novela original de
+                        Glukhovsky. Aunque sólo describía su propia visión de un post-apocalíptico Moscú, los libros del
+                        universo extendido tienen lugar en una gran variedad de áreas diferentes. Entre ellos se
+                        encuentran:
+                        Moscú, San Petersburgo, Óblast de Leningrado, Nizhny Novgorod, Oblast de Tver, Oblast de Moscú,
+                        Península de Kola, Rostov del Don, Samara, Novosibirsk, Yekaterinburgo, y Kaliningrado. Algunos
+                        de los
+                        libros de la serie están ambientados en otros lugares fuera de Rusia, como Ucrania, Bielorrusia,
+                        Reino
+                        Unido, Italia, Polonia y Antár</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
 </html>
 
 {% endblock content %}

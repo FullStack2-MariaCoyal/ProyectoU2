@@ -1,18 +1,63 @@
 {% extends './pages/components/navbar.html' %}
-
+{% load static %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<h1>Soy el survivor bue</h1>
+
+<body>
+    <div class="titlesurvivor_monster">
+        <h1 class="">Supervivientes</h1>
+    </div>
+    <div class="container" style="display: flex;">
+        
+        <div class="card-group" style="width: 50rem;">
+            {% for list in lista%}
+            <div class="card m-lg-1" style="">
+                <div class="invitado">
+                    <img src="{% static list.image %}" alt="" style="width: 60%;">
+                </div>
+                <div class="card-body">
+                    <ul >
+                        <li>
+                            <h5 class="card-title">{{list.survivorName}}</h5>
+                        </li>
+                        <li>
+                            <h5 class="card-title">Cumpleaños: {{list.age}}</h5>
+                        </li>
+                        <li>
+                            <p class="card-text"> {{list.description}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<!--             <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="{% static list.image %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{list.survivorName}}</h5>
+                      <h5 class="card-title">{{list.age}}</h5>
+                      <p class="card-text">{{list.description}}</p>
+                    </div>
+                  </div>
+                </div>
+            </div> -->
+            {% endfor %}
+            
+                
 </body>
+
 <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
 </html>
 
 {% endblock content %}
