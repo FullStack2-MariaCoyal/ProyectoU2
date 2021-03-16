@@ -6,4 +6,4 @@ class UploadImage(forms.ModelForm):
 
     class Meta:
         model = PostMonster
-        fields = ['image']
+        fields = ['Name', 'image']

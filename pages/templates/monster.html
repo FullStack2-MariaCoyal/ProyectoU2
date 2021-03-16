@@ -12,17 +12,21 @@
 </head>
 
 <body>
+    <div class="titlesurvivor_monster">
+        <h1 class="">Monstruos</h1>
+    </div>
     <div class="container" style="display: flex;">
+        
         <div class="card-group" style="width: 50rem;">
             {% for list in lista%}
-            <div class="card m-lg-1" >
+            <div class="card m-lg-1">
                 <div class="invitado">
                     <img src="{% static list.image %}" alt="" style="width: 60%;">
                 </div>
                 <div class="card-body">
                     <ul >
                         <li>
-                            <h5 class="card-title">{{list.monsterName}}</h5>
+                            <h5 class="card-title">{{list.Name}}</h5>
                         </li>
                         <li>
                             <p class="card-text"> {{list.description}}</p>
@@ -30,9 +34,21 @@
                     </ul>
                 </div>
             </div>
+<!--             <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="{% static list.image %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{list.survivorName}}</h5>
+                      <h5 class="card-title">{{list.age}}</h5>
+                      <p class="card-text">{{list.description}}</p>
+                    </div>
+                  </div>
+                </div>
+            </div> -->
             {% endfor %}
-        </div>
-    </div>
+            
+                
 </body>
 
 <!-- CSS only -->

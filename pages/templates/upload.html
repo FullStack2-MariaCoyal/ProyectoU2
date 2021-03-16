@@ -3,15 +3,37 @@
 {% load static %}
 
 {% block content %}
+<div class="container">
   <form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="typeselect" class="form-label">Tipo</label>
+        <select class="form-select" id="typeselect" aria-label="Default select example">
+          <option selected>...</option>
+          <option value="1">Superviviente</option>
+          <option value="2">Monstruo</option>
+        </select>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre</label>
+      <input type="name" class="form-control" id="name">
+    </div>
+    <div class="mb-3">
+      <label for="birth" class="form-label">Cumpleaños</label>
+      <input type="date" class="form-control" id="birth">
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="description">Descripción</label>
+      <textarea class="form-control" name="description" id="description" cols="100" rows="10"></textarea>
+    </div>
     {% csrf_token %}
     <input type="file" name="myfile">
-    <button type="submit">Upload</button>
+    <button class="btn btn-success" type="submit">Upload</button>
   </form>
-
   {% if uploaded_file_url %}
-    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
-  {% endif %}
+  <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+{% endif %}
+</div>
 
-  <p><a href="{% url 'home' %}">Return to home</a></p>
+
+
 {% endblock %}
