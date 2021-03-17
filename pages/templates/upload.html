@@ -5,13 +5,14 @@
 {% block content %}
 <div class="container">
   <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="mb-3">
       <label for="typeselect" class="form-label">Tipo</label>
-        <select class="form-select" id="typeselect" aria-label="Default select example">
-          <option selected>...</option>
-          <option value="1">Superviviente</option>
-          <option value="2">Monstruo</option>
-        </select>
+      <select class="form-select" id="typeselect" aria-label="Default select example">
+        <option selected>...</option>
+        <option value="S">Superviviente</option>
+        <option value="M">Monstruo</option>
+      </select>
     </div>
     <div class="mb-3">
       <label for="name" class="form-label">Nombre</label>
@@ -25,13 +26,16 @@
       <label class="form-label" for="description">Descripción</label>
       <textarea class="form-control" name="description" id="description" cols="100" rows="10"></textarea>
     </div>
-    {% csrf_token %}
-    <input type="file" name="myfile">
+    <div class="mb-3">
+      <input class="form-control" type="file" name="myfile">
+      
+    </div>
     <button class="btn btn-success" type="submit">Upload</button>
+
   </form>
   {% if uploaded_file_url %}
   <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
-{% endif %}
+  {% endif %}
 </div>
 
 
